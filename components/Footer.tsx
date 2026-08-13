@@ -1,36 +1,52 @@
-import Link from 'next/link';
-import { Landmark, MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube, Linkedin, ShieldCheck } from 'lucide-react';
+import Link from "next/link";
+import {
+  Landmark,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
+  Linkedin,
+  ShieldCheck,
+  ArrowUpRight,
+} from "lucide-react";
 
 const quickLinks = [
-  { name: 'About Us', href: '#about' },
-  { name: 'Accounts', href: '#accounts' },
-  { name: 'Loans', href: '#loans' },
-  { name: 'Deposits', href: '#deposits' },
-  { name: 'Govt. Schemes', href: '#schemes' },
-  { name: 'Branches', href: '#branches' },
-  { name: 'Careers', href: '#careers' },
+  { name: "About Us", href: "#about" },
+  { name: "Accounts", href: "#accounts" },
+  { name: "Loans", href: "#loans" },
+  { name: "Deposits", href: "#deposits" },
+  { name: "Govt. Schemes", href: "#schemes" },
+  { name: "Branches", href: "#branches" },
+  { name: "Careers", href: "#careers" },
 ];
 
 const serviceLinks = [
-  { name: 'Savings Account', href: '#accounts' },
-  { name: 'Fixed Deposit (FD)', href: '#deposits' },
-  { name: 'Recurring Deposit (RD)', href: '#deposits' },
-  { name: 'Home Loan', href: '#loans' },
-  { name: 'Kisan Credit Card', href: '#schemes' },
-  { name: 'Net Banking', href: '#net-banking' },
+  { name: "Savings Account", href: "#accounts" },
+  { name: "Fixed Deposit (FD)", href: "#deposits" },
+  { name: "Recurring Deposit (RD)", href: "#deposits" },
+  { name: "Home Loan", href: "#loans" },
+  { name: "Kisan Credit Card", href: "#schemes" },
+  { name: "Net Banking", href: "#net-banking" },
 ];
 
 const socials = [
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
+  { icon: Facebook, label: "Facebook", href: "#" },
+  { icon: Twitter, label: "Twitter", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Youtube, label: "YouTube", href: "#" },
+  { icon: Linkedin, label: "LinkedIn", href: "#" },
 ];
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative overflow-hidden bg-navy-900 text-white">
+    <footer
+      id="contact"
+      className="relative overflow-hidden bg-navy-900 text-white"
+    >
       {/* Decorative gradient blobs */}
       <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-gold-500/5 blur-3xl" />
       <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-green-500/5 blur-3xl" />
@@ -47,7 +63,9 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-sm font-bold">Highland Valley</span>
-                <span className="text-xs text-white/60">Cooperative Bank Ltd.</span>
+                <span className="text-xs text-white/60">
+                  Cooperative Bank Ltd.
+                </span>
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
@@ -57,7 +75,8 @@ export default function Footer() {
             <div className="mt-5 space-y-3 text-sm">
               <p className="flex items-start gap-2 text-white/80">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />
-                2nd Floor, Heritage Plaza, Circular Road, Kohima, Nagaland - 797001
+                2nd Floor, Heritage Plaza, Circular Road, Kohima, Nagaland -
+                797001
               </p>
               <p className="flex items-center gap-2 text-white/80">
                 <Phone className="h-4 w-4 shrink-0 text-gold-400" />
@@ -70,7 +89,8 @@ export default function Footer() {
               <p className="flex items-start gap-2 text-white/80">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />
                 Mon–Fri: 10:00 AM – 4:00 PM
-                <br />Sat: 10:00 AM – 1:00 PM
+                <br />
+                Sat: 10:00 AM – 1:00 PM
               </p>
             </div>
           </div>
@@ -175,11 +195,33 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="border-t border-white/10 bg-navy-900">
-        <div className="container-bank py-4 text-center text-xs text-white/50">
-          © 2025 Highland Valley Cooperative Bank Ltd. All Rights Reserved. |{' '}
-          IFSC: HVNB0000001 | License No. RBI/COOP/NL/1994/001 (placeholder)
+        <div className="container-bank flex flex-col items-center justify-between gap-3 py-4 text-center text-xs text-white/50 sm:flex-row sm:text-left">
+          {/* Copyright Info */}
+          <p>
+            © 2025 Highland Valley Cooperative Bank Ltd. All Rights Reserved.{" "}
+            <span className="hidden sm:inline">|</span> IFSC: HVNB0000001{" "}
+            <span className="hidden sm:inline">|</span> License No.
+            RBI/COOP/NL/1994/001 (placeholder)
+          </p>
+
+          {/* CreyoTech Credit */}
+          <a
+            href="https://creyotech.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex shrink-0 items-center gap-1.5 transition-colors duration-300"
+          >
+            <span>Made with</span>
+            <span className="text-red-500 animate-pulse">❤️</span>
+            <span>by</span>
+
+            <span className="font-semibold text-amber-400 transition-colors group-hover:text-amber-300">
+              Creyotech IT Services
+            </span>
+
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </a>
         </div>
       </div>
     </footer>

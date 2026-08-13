@@ -22,16 +22,16 @@ export default function Hero() {
       <div className="absolute -left-20 bottom-20 h-80 w-80 rounded-full bg-green-500/15 blur-3xl float-slow" style={{ animationDelay: '2s' }} />
       <div className="absolute right-1/3 top-1/2 h-40 w-40 rounded-full bg-blue-500/10 blur-2xl float-slow" style={{ animationDelay: '4s' }} />
 
-      <div className="container-bank relative z-10 grid gap-12 py-16 lg:grid-cols-2 lg:py-24 xl:py-28">
+      <div className="container-bank relative z-10 grid gap-12 py-10 lg:grid-cols-2 lg:py-24 xl:py-10">
         {/* Left content */}
         <div className="flex flex-col justify-center animate-fade-in-up">
-          <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-gold-500/40 bg-gradient-to-r from-gold-500/20 to-gold-600/10 px-4 py-2 text-sm font-medium text-gold-300 shadow-lg">
-            <ShieldCheck className="h-4 w-4" />
+          <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-gold-500/40 bg-gradient-to-r from-gold-500/20 to-gold-600/10 px-3 py-1 text-xs font-medium text-gold-300 shadow-lg">
+            <ShieldCheck className="h-3 w-3" />
             Serving Northeast India since 1994
             <span className="ml-1 flex h-2 w-2 rounded-full bg-green-400 pulse-glow" />
           </div>
 
-          <h1 className="text-4xl font-bold leading-tight text-white text-shadow-lg sm:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="text-4xl font-bold leading-tight text-white text-shadow-lg sm:text-5xl xl:text-6xl">
             Banking Rooted in{' '}
             <span className="relative bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 bg-clip-text text-transparent">
               Community Trust
@@ -47,21 +47,21 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 text-lg font-medium text-gold-300/90">
+          <p className="mt-4 text-base font-medium text-gold-300/90">
             Aapka Vishwas, Hamari Zimmedari
           </p>
 
-          <p className="mt-5 max-w-xl text-base leading-relaxed font-medium text-white text-shadow-lg sm:text-lg">
+          <p className="mt-2 max-w-xl text-base leading-tight font-medium text-white text-shadow-lg sm:text-sm">
             From the hills of Kohima to the valleys of Northeast India, Highland
             Valley Cooperative Bank has empowered farmers, families, and
             businesses for over three decades. We bring you modern banking with
             the warmth of a community that grows together.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <Link
               href="#accounts"
-              className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 px-7 py-4 text-base font-bold text-navy-900 shadow-xl transition-all hover:shadow-2xl hover:shadow-gold-500/30"
+              className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 px-4 py-2 text-base font-bold text-navy-900 shadow-xl transition-all hover:shadow-2xl hover:shadow-gold-500/30"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-white/0 via-white/40 to-white/0 transition-transform duration-700 group-hover:translate-x-full" />
               Open an Account
@@ -69,24 +69,24 @@ export default function Hero() {
             </Link>
             <Link
               href="#loans"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/30 bg-white/5 px-7 py-4 text-base font-semibold text-white backdrop-blur-md transition-all hover:border-gold-400/50 hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/30 bg-white/5 px-4 py-2 text-base font-semibold text-white backdrop-blur-md transition-all hover:border-gold-400/50 hover:bg-white/10"
             >
               Explore Loans
             </Link>
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+          <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-5">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white sm:text-3xl">25+</span>
+              <span className="text-2xl font-bold text-white">25+</span>
               <span className="text-xs text-white/60">Branches</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white sm:text-3xl">50,000+</span>
+              <span className="text-2xl font-bold text-white">50,000+</span>
               <span className="text-xs text-white/60">Members</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white sm:text-3xl">₹500 Cr+</span>
+              <span className="text-2xl font-bold text-white">₹500 Cr+</span>
               <span className="text-xs text-white/60">Assets</span>
             </div>
           </div>
