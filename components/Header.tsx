@@ -1,19 +1,29 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Mail, MapPin, Lock, Landmark, ChevronDown } from 'lucide-react';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Lock,
+  Landmark,
+  ChevronDown,
+} from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About Us', href: '#about' },
-  { name: 'Accounts', href: '#accounts' },
-  { name: 'Loans', href: '#loans' },
-  { name: 'Deposits', href: '#deposits' },
-  { name: 'Branches', href: '#branches' },
-  { name: 'Govt. Schemes', href: '#schemes' },
-  { name: 'Careers', href: '#careers' },
-  { name: 'Contact', href: '#contact' },
+  { name: "Home", href: "#home" },
+  { name: "About Us", href: "#about" },
+  { name: "Accounts", href: "#accounts" },
+  { name: "Loans", href: "#loans" },
+  { name: "Deposits", href: "#deposits" },
+  { name: "Branches", href: "#branches" },
+  { name: "Govt. Schemes", href: "#schemes" },
+  { name: "Careers", href: "#careers" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -22,14 +32,14 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
@@ -63,17 +73,25 @@ export default function Header() {
       {/* Main navbar */}
       <div
         className={`w-full border-b transition-all duration-300 ${
-          scrolled
-            ? 'bg-white shadow-md'
-            : 'bg-white/95 backdrop-blur-sm'
+          scrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm"
         }`}
       >
         <div className="container-bank flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-3 transition-transform hover:scale-105" aria-label="Highland Valley Cooperative Bank home">
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-navy-700 to-navy-900 shadow-lg lg:h-12 lg:w-12">
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gold-400/20 to-transparent" />
-              <Landmark className="relative h-6 w-6 text-gold-400 lg:h-7 lg:w-7" />
+          <Link
+            href="#home"
+            className="flex items-center gap-3 transition-transform hover:scale-105"
+            aria-label="Highland Valley Cooperative Bank home"
+          >
+            <div className="relative h-11 w-11 shrink-0">
+              <Image
+                src="/images/logo.jpg"
+                alt="AquaFlow Bath Solutions"
+                fill
+                priority
+                className="object-contain rounded-xl"
+                sizes="44px"
+              />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-bold text-navy-800 lg:text-base">
@@ -130,7 +148,11 @@ export default function Header() {
               aria-label="Toggle menu"
               aria-expanded={isOpen}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </button>
           </div>
         </div>
@@ -163,10 +185,12 @@ export default function Header() {
                 <Phone className="h-4 w-4 text-gold-400" /> +91 94360 12345
               </div>
               <div className="flex items-center gap-2 py-1">
-                <Mail className="h-4 w-4 text-gold-400" /> info@highlandvalleycoop.in
+                <Mail className="h-4 w-4 text-gold-400" />{" "}
+                info@highlandvalleycoop.in
               </div>
               <div className="flex items-center gap-2 py-1">
-                <MapPin className="h-4 w-4 text-gold-400" /> Kohima, Nagaland - 797001
+                <MapPin className="h-4 w-4 text-gold-400" /> Kohima, Nagaland -
+                797001
               </div>
             </div>
           </nav>

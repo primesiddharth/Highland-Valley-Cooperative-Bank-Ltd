@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   ArrowUpRight,
 } from "lucide-react";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "About Us", href: "#about" },
@@ -57,9 +58,15 @@ export default function Footer() {
           {/* Brand & contact */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3">
-              <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-navy-700 to-navy-900 ring-1 ring-gold-500/30 shadow-lg">
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gold-400/20 to-transparent" />
-                <Landmark className="relative h-6 w-6 text-gold-400" />
+              <div className="relative h-11 w-11 shrink-0">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="AquaFlow Bath Solutions"
+                  fill
+                  priority
+                  className="object-contain rounded-xl"
+                  sizes="44px"
+                />
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-sm font-bold">Highland Valley</span>
